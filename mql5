@@ -1,0 +1,81 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                                 UGenesys Volume MT4|
+//|                                    https://www.forexroboteasy.com |
+//|                                        Developed by Forex Robot Easy Team|
+//+------------------------------------------------------------------+
+
+#property strict
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+   // Calculate the market volume using 25 different volume indicators
+   double volume = CalculateMarketVolume();
+
+   // Display a histogram to represent the market volume
+   DisplayHistogram(volume);
+
+   // Check market conditions and indicate bullish or bearish
+   if (IsBullish(volume))
+   {
+      SetHistogramColor(COLOR_GREEN);
+   }
+   else if (IsBearish(volume))
+   {
+      SetHistogramColor(COLOR_RED);
+   }
+
+   // Place orders based on volume indicators
+   PlaceOrders(volume);
+}
+
+//+------------------------------------------------------------------+
+//| Calculate the market volume using 25 different volume indicators  |
+//+------------------------------------------------------------------+
+double CalculateMarketVolume()
+{
+   // TODO: Implement code to calculate market volume using 25 indicators
+}
+
+//+------------------------------------------------------------------+
+//| Display a histogram to represent the market volume                |
+//+------------------------------------------------------------------+
+void DisplayHistogram(double volume)
+{
+   // TODO: Implement code to display histogram based on market volume
+}
+
+//+------------------------------------------------------------------+
+//| Check if market conditions are bullish based on the volume        |
+//+------------------------------------------------------------------+
+bool IsBullish(double volume)
+{
+   // TODO: Implement code to check if market conditions are bullish
+}
+
+//+------------------------------------------------------------------+
+//| Check if market conditions are bearish based on the volume        |
+//+------------------------------------------------------------------+
+bool IsBearish(double volume)
+{
+   // TODO: Implement code to check if market conditions are bearish
+}
+
+//+------------------------------------------------------------------+
+//| Set the histogram color based on market conditions                |
+//+------------------------------------------------------------------+
+void SetHistogramColor(color color)
+{
+   // TODO: Implement code to set histogram color based on market conditions
+}
+
+//+------------------------------------------------------------------+
+//| Place orders based on volume indicators                           |
+//+------------------------------------------------------------------+
+void PlaceOrders(double volume)
+{
+   // TODO: Implement code to place orders based on volume indicators
+}
